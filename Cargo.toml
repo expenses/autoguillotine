@@ -1,0 +1,9 @@
+[package]
+name = "autoguillotine"
+version = "0.1.0"
+authors = ["Expenses <expenses@airmail.cc>"]
+
+[dependencies]
+image = "*"
+rayon = "*"
+ord_subset = "*"
