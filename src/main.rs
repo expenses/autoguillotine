@@ -31,7 +31,7 @@ fn difference_horizontal(image: &image::RgbImage) -> (u32, f64) {
     // Create vecs for the old and new lines of pixels
     let mut old: Line = Vec::with_capacity(image.width() as usize);
     let mut new: Line = vec![image::Rgb {data: [0; 3]}; image.width() as usize];
-    let mut values = Vec::with_capacity(image.height() - 1);
+    let mut values = Vec::with_capacity(image.height() as usize - 1);
 
     // Loop through the pixels T -> B, L -> R
     for (x, _, pixel) in image.enumerate_pixels() {
@@ -60,7 +60,7 @@ fn difference_vertical(image: &image::RgbImage) -> (u32, f64) {
     // Create vecs for the old and new lines of pixels
     let mut old: Line = Vec::with_capacity(image.height() as usize);
     let mut new: Line = vec![image::Rgb {data: [0; 3]}; image.height() as usize];
-    let mut values = Vec::with_capacity(image.width() - 1);
+    let mut values = Vec::with_capacity(image.width() as usize - 1);
 
     // Loop through the pixels L -> R, T -> B
     for x in 0 .. image.width() {
